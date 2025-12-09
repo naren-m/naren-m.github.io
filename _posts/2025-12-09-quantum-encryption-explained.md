@@ -177,4 +177,4 @@ The quantum threat is specifically about **key exchange** (RSA/ECC), not about *
 
 ---
 
-*Generated from Cloudflare's Post-Quantum Cryptography article discussion*
+Reference: https://blog.cloudflare.com/pq-2025/
