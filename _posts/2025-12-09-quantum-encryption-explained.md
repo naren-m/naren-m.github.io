@@ -5,11 +5,11 @@ subtitle: Understanding Post-Quantum Cryptography from First Principles
 published: true
 ---
 
-# How Quantum Computers Break Encryption: First Principles
+# How Quantum Computers Break Encryption
 
 ## The Core Problem: Why Do We Need New Cryptography?
 
-### First Principle #1: Today's internet security relies on "hard math problems"
+### Today's internet security relies on "hard math problems"
 
 When you visit a website securely (HTTPS), two things happen:
 
@@ -20,7 +20,7 @@ Both rely on mathematical problems that are *extremely hard* for regular compute
 
 ---
 
-### First Principle #2: Quantum computers break these specific hard problems
+### Quantum computers break these specific hard problems
 
 Quantum computers aren't "faster regular computers." They're fundamentally different machines that use quantum physics (superposition, entanglement) to solve *certain specific problems* exponentially faster.
 
@@ -28,7 +28,7 @@ Unfortunately, the math problems protecting today's internet (RSA, elliptic curv
 
 ---
 
-### First Principle #3: Encrypted data can be stored forever ("Harvest Now, Decrypt Later")
+### Encrypted data can be stored forever ("Harvest Now, Decrypt Later")
 
 Here's the scary part: An attacker can *record* your encrypted traffic today. It looks like gibberish now. But once quantum computers become powerful enough ("Q-day"), they can decrypt that old data.
 
@@ -36,7 +36,7 @@ So if you send something sensitive today (medical records, trade secrets, govern
 
 ---
 
-### First Principle #4: Use math problems that even quantum computers can't solve
+### Use math problems that even quantum computers can't solve
 
 Cryptographers have found new mathematical foundations that resist quantum attacks:
 - **Lattice-based** (most popular today)
@@ -50,7 +50,7 @@ These have been studied for decades. NIST (US standards body) has now standardiz
 
 ---
 
-### First Principle #5: Key agreement and signatures have different urgency
+### Key agreement and signatures have different urgency
 
 | | Key Agreement | Signatures/Certificates |
 |---|---|---|
