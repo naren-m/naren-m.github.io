@@ -61,6 +61,7 @@
   <div id="search-results"></div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
 <script>
   (function() {
     const searchInput = document.getElementById('search-input');
@@ -78,17 +79,30 @@
       {% endfor %}
     ];
 
+    // Initialize Fuse.js with fuzzy search options
+    const fuseOptions = {
+      keys: [
+        { name: 'title', weight: 0.7 },      // Title matches weighted higher
+        { name: 'content', weight: 0.3 }     // Content matches weighted lower
+      ],
+      threshold: 0.4,           // 0.0 = perfect match, 1.0 = match anything
+      distance: 100,            // How far to search in text
+      minMatchCharLength: 2,    // Minimum characters to match
+      ignoreLocation: true,     // Search entire content, not just beginning
+      includeScore: true,       // Include match score in results
+      useExtendedSearch: false
+    };
+
+    const fuse = new Fuse(notes, fuseOptions);
+
     function search(query) {
       if (!query || query.length < 2) {
         searchResults.innerHTML = '';
         return;
       }
 
-      const lowerQuery = query.toLowerCase();
-      const results = notes.filter(note => {
-        return note.title.toLowerCase().includes(lowerQuery) ||
-               note.content.toLowerCase().includes(lowerQuery);
-      }).slice(0, 10); // Limit to 10 results
+      // Perform fuzzy search
+      const results = fuse.search(query).slice(0, 10); // Limit to 10 results
 
       displayResults(results, query);
     }
@@ -99,11 +113,17 @@
         return;
       }
 
-      const html = results.map(note => {
+      const html = results.map(result => {
+        const note = result.item;
+        const score = Math.round((1 - result.score) * 100); // Convert to percentage
         const excerpt = note.excerpt || note.content.substring(0, 150) + '...';
+
         return `
           <div class="search-result-item">
-            <h4><a href="${note.url}">${note.title}</a></h4>
+            <h4>
+              <a href="${note.url}">${note.title}</a>
+              <span style="font-size: 0.7em; color: #999; font-weight: normal; margin-left: 0.5em;">${score}%</span>
+            </h4>
             <p>${excerpt}</p>
           </div>
         `;
