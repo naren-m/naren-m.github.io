@@ -17,8 +17,12 @@ This digital garden combines:
 - **Knowledge Graph**: Visualize connections between ideas
 
 <p style="padding: 1.5em; background: #f5f7ff; border-radius: 4px; margin: 2em 0;">
-  💡 <strong>Tip:</strong> Explore notes by clicking links or using the knowledge graph visualization below.
+  💡 <strong>Tip:</strong> Use the search box below to find notes, or explore visually with the knowledge graph.
 </p>
+
+## Search Notes
+
+{% include search.html %}
 
 ## Recently Updated Notes
 
@@ -30,6 +34,12 @@ This digital garden combines:
     </li>
   {% endfor %}
 </ul>
+
+## Knowledge Graph
+
+Explore connections between notes visually. Click nodes to navigate, hover to see relationships.
+
+{% include notes_graph.html %}
 
 ## Knowledge Domains
 
