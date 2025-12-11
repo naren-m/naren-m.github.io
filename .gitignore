@@ -16,3 +16,14 @@ ehthumbs.db
 
 # iPython Notebook checkpoints
 _posts/.ipynb_checkpoints/
+
+# Literature notes artifacts
+literature-notes/*.py
+literature-notes/*.db
+literature-notes/.venv/
+literature-notes/__pycache__/
+literature-notes/zettelkasten.db
+literature-notes/requirements.txt
+literature-notes/*.json
+literature-notes/api/
+literature-notes/graph/

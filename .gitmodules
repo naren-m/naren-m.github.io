@@ -1,0 +1,3 @@
+[submodule "literature-notes"]
+	path = literature-notes
+	url = git@github.com:naren-m/literature-notes.git
