@@ -37,6 +37,20 @@ jobs:
           gem install bundler
           bundle install
 
+      - name: Copy literature-notes to _notes
+        run: |
+          # Remove symlinks and copy actual content from submodule
+          rm -f _notes/CSE _notes/Security _notes/Statistics _notes/books _notes/highlights _notes/india _notes/math _notes/people _notes/sanskrit-lit
+          cp -r literature-notes/CSE _notes/
+          cp -r literature-notes/Security _notes/
+          cp -r literature-notes/Statistics _notes/
+          cp -r literature-notes/books _notes/
+          cp -r literature-notes/highlights _notes/
+          cp -r literature-notes/india _notes/
+          cp -r literature-notes/math _notes/
+          cp -r literature-notes/people _notes/
+          cp -r literature-notes/sanskrit-lit _notes/
+
       - name: Build Jekyll site
         run: bundle exec jekyll build --trace
         env:
