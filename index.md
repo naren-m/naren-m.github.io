@@ -5,24 +5,51 @@ id: home
 permalink: /
 ---
 
-# Naren Mudivarthy's Digital Garden 🌱
-
-Welcome to my digital garden - a collection of interconnected notes, thoughts, and learnings.
-
-## About This Space
-
-This digital garden combines:
-- **Literature Notes**: Research and learning from books, articles, and courses
-- **Converted Posts**: Previous blog posts transformed into evergreen notes
-- **Knowledge Graph**: Visualize connections between ideas
-
-<p style="padding: 1.5em; background: #f5f7ff; border-radius: 4px; margin: 2em 0;">
-  💡 <strong>Tip:</strong> Use the search box below to find notes, or explore visually with the knowledge graph.
-</p>
+# Naren Mudivarthy's Digital Garden
 
 ## Search Notes
 
 {% include search.html %}
+
+## Knowledge Domains
+
+### [Computer Science & Engineering](/CSE/) (55+ notes)
+- [Cryptography](/CSE/Cryptography/) - Encryption, Hashing, Security
+- [Coding & Algorithms](/CSE/coding/)
+- [Design Patterns](/CSE/design_patterns/)
+
+### [Sanskrit Literature & Philosophy](/sanskrit-lit/) (44 notes)
+- [Concepts](/sanskrit-lit/Concepts/)
+- [Yoga Sutras](/sanskrit-lit/yoga_sutras/)
+- [Vedic Texts & Grammar](/sanskrit-lit/)
+
+### [Book Highlights](/highlights/) (36 highlights)
+- [Books](/highlights/Books/) - Atomic Habits, Elon Musk, Philosophy & more
+- [Articles](/highlights/Articles/) - Technical papers, RFCs
+
+### [Books Reference](/books/) (8 texts)
+- [Reading Lists by Category](/books/Books/)
+- [Ashtanga Hridayam](/books/ashtangahrydayam/) - Ayurvedic Medicine
+
+### [People & Biographies](/people/) (9 notes)
+Notable thinkers: Panini, Brian Kernighan, Andrew Huberman, Max Muller
+
+### [India & Indology](/india/) (3 notes)
+Cultural studies and historical analysis
+
+### [Security](/Security/) (2 notes)
+- [Authentication](/Security/Authentication/)
+- [Security Vulnerabilities](/Security/Security-Vulnerabilities/)
+
+### [Statistics](/Statistics/) (2 notes)
+- [ARIMA](/Statistics/ARIMA/)
+- [Exponential Smoothing](/Statistics/Exponential-Smoothing/)
+
+### [Mathematics](/math/) (2 notes)
+Foundational concepts and Sanskrit mathematics
+
+### [Converted Blog Posts](/converted-posts/) (6 notes)
+Technical tutorials and cultural explorations
 
 ## Recently Updated Notes
 
@@ -40,15 +67,6 @@ This digital garden combines:
 Explore connections between notes visually. Click nodes to navigate, hover to see relationships.
 
 {% include notes_graph.html %}
-
-## Knowledge Domains
-
-Explore notes organized by domain:
-- **Computer Science**: Security, cryptography, design patterns
-- **Mathematics**: Fibonacci, statistics, algorithms
-- **Sanskrit Literature**: Vedic texts, philosophy
-- **Books**: Summaries and highlights
-- **People**: Biographical notes
 
 <style>
   .wrapper {
