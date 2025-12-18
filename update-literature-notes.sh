@@ -6,7 +6,7 @@ set -e
 echo "Updating literature-notes submodule to latest..."
 
 cd literature-notes
-git pull origin master
+git pull origin main
 cd ..
 
 git add literature-notes
