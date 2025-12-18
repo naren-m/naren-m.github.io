@@ -13,40 +13,29 @@ permalink: /
 
 ## Knowledge Domains
 
-### [Computer Science & Engineering](/CSE/) (55+ notes)
-- [Cryptography](/CSE/Cryptography/) - Encryption, Hashing, Security
-- [Coding & Algorithms](/CSE/coding/)
-- [Design Patterns](/CSE/design_patterns/)
+### [Computer Science & Engineering](/computer-science/) (59 notes)
+- [Cryptography](/computer-science/cryptography/) - Encryption, Hashing, Security
+- [Coding & Algorithms](/computer-science/coding-practices/)
+- [Design Patterns](/computer-science/design-patterns/)
+- [Security](/computer-science/security/)
 
-### [Sanskrit Literature & Philosophy](/sanskrit-lit/) (44 notes)
-- [Concepts](/sanskrit-lit/Concepts/)
-- [Yoga Sutras](/sanskrit-lit/yoga_sutras/)
-- [Vedic Texts & Grammar](/sanskrit-lit/)
+### [Sanskrit Literature & Philosophy](/sanskrit-literature/) (44 notes)
+Vedic texts, philosophy, grammar, and classical literature
 
-### [Book Highlights](/highlights/) (36 highlights)
-- [Books](/highlights/Books/) - Atomic Habits, Elon Musk, Philosophy & more
-- [Articles](/highlights/Articles/) - Technical papers, RFCs
-
-### [Books Reference](/books/) (8 texts)
-- [Reading Lists by Category](/books/Books/)
-- [Ashtanga Hridayam](/books/ashtangahrydayam/) - Ayurvedic Medicine
+### [Media](/media/) (38+ items)
+- [Books](/media/books/) - Summaries, highlights, and references
+- [Articles](/media/articles/) - Technical papers, RFCs
+- [Videos](/media/videos/) - Curated video content
+- [Podcasts](/media/podcasts/) - Audio content
 
 ### [People & Biographies](/people/) (9 notes)
 Notable thinkers: Panini, Brian Kernighan, Andrew Huberman, Max Muller
 
-### [India & Indology](/india/) (3 notes)
+### [Mathematics](/mathematics/) (4 notes)
+Mathematical concepts and foundations
+
+### [History](/history/) (3 notes)
 Cultural studies and historical analysis
-
-### [Security](/Security/) (2 notes)
-- [Authentication](/Security/Authentication/)
-- [Security Vulnerabilities](/Security/Security-Vulnerabilities/)
-
-### [Statistics](/Statistics/) (2 notes)
-- [ARIMA](/Statistics/ARIMA/)
-- [Exponential Smoothing](/Statistics/Exponential-Smoothing/)
-
-### [Mathematics](/math/) (2 notes)
-Foundational concepts and Sanskrit mathematics
 
 ### [Converted Blog Posts](/converted-posts/) (6 notes)
 Technical tutorials and cultural explorations
