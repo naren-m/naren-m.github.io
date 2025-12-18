@@ -14,28 +14,22 @@ permalink: /
 ## Knowledge Domains
 
 ### [Computer Science & Engineering](/computer-science/) (59 notes)
-- [Cryptography](/computer-science/cryptography/) - Encryption, Hashing, Security
-- [Coding & Algorithms](/computer-science/coding-practices/)
-- [Design Patterns](/computer-science/design-patterns/)
-- [Security](/computer-science/security/)
+Cryptography, security, algorithms, design patterns, and software engineering concepts.
 
 ### [Sanskrit Literature & Philosophy](/sanskrit-literature/) (44 notes)
-Vedic texts, philosophy, grammar, and classical literature
+Vedic texts, philosophy, grammar, and classical literature.
 
 ### [Media](/media/) (38+ items)
-- [Books](/media/books/) - Summaries, highlights, and references
-- [Articles](/media/articles/) - Technical papers, RFCs
-- [Videos](/media/videos/) - Curated video content
-- [Podcasts](/media/podcasts/) - Audio content
+Books, articles, videos, podcasts, and curated content highlights.
 
 ### [People & Biographies](/people/) (9 notes)
-Notable thinkers: Panini, Brian Kernighan, Andrew Huberman, Max Muller
+Notable thinkers: Panini, Brian Kernighan, Andrew Huberman, Max Müller.
 
 ### [Mathematics](/mathematics/) (4 notes)
-Mathematical concepts and foundations
+Mathematical concepts, statistics, and foundations.
 
 ### [History](/history/) (3 notes)
-Cultural studies and historical analysis
+Cultural studies, Indian history, and Indological research.
 
 ### [Converted Blog Posts](/converted-posts/) (6 notes)
 Technical tutorials and cultural explorations
