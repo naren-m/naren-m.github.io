@@ -18,7 +18,7 @@ cd literature-notes
 # Check if we should pull from remote
 if [[ "$1" != "--local" ]]; then
     echo "📥 Pulling latest changes from literature-notes repository..."
-    git pull origin main
+    git pull origin master
 else
     echo "📝 Using local literature-notes changes..."
 fi
