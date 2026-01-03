@@ -1,0 +1,53 @@
+<!-- Mermaid.js for diagram rendering -->
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: 'default',
+    securityLevel: 'strict',
+    flowchart: {
+      useMaxWidth: true,
+      htmlLabels: true,
+      curve: 'basis'
+    }
+  });
+
+  // Find all code blocks with mermaid class or language-mermaid
+  document.addEventListener('DOMContentLoaded', async () => {
+    const mermaidBlocks = document.querySelectorAll('pre code.language-mermaid, code.language-mermaid');
+
+    for (let i = 0; i < mermaidBlocks.length; i++) {
+      const code = mermaidBlocks[i];
+      const pre = code.parentElement;
+      const mermaidCode = code.textContent;
+
+      // Create a container for the rendered diagram
+      const container = document.createElement('div');
+      container.className = 'mermaid';
+
+      try {
+        // Mermaid.render returns sanitized SVG - safe to insert
+        const { svg } = await mermaid.render(`mermaid-${i}`, mermaidCode);
+        container.insertAdjacentHTML('beforeend', svg);
+        pre.replaceWith(container);
+      } catch (error) {
+        console.error('Mermaid rendering error:', error);
+        // Keep original code block if rendering fails
+      }
+    }
+  });
+</script>
+
+<style>
+  .mermaid {
+    text-align: center;
+    margin: 1.5em 0;
+    overflow-x: auto;
+  }
+
+  .mermaid svg {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
