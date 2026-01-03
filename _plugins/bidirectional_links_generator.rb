@@ -14,6 +14,14 @@ class BidirectionalLinksGenerator < Jekyll::Generator
     # Convert all Wiki/Roam-style double-bracket link syntax to plain HTML
     # anchor tag elements (<a>) with "internal-link" CSS class
     all_docs.each do |current_note|
+      # Extract and preserve code blocks to prevent wikilink processing inside them
+      code_blocks = []
+      current_note.content = current_note.content.gsub(/```[\s\S]*?```/) do |match|
+        placeholder = "<!--CODE_BLOCK_#{code_blocks.length}-->"
+        code_blocks << match
+        placeholder
+      end
+
       all_docs.each do |note_potentially_linked_to|
         note_title_regexp_pattern = Regexp.escape(
           File.basename(
@@ -71,6 +79,11 @@ class BidirectionalLinksGenerator < Jekyll::Generator
             <span class='invalid-link-brackets'>]]</span></span>
         HTML
       )
+
+      # Restore code blocks
+      code_blocks.each_with_index do |block, index|
+        current_note.content = current_note.content.gsub("<!--CODE_BLOCK_#{index}-->", block)
+      end
     end
 
     # Identify note backlinks and add them to each note
