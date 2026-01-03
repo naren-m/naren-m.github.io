@@ -144,3 +144,41 @@ code {
   color: #ccc;
   cursor: help;
 }
+
+// Table styles
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  font-size: 0.95em;
+  overflow-x: auto;
+  display: block;
+
+  @media (min-width: 600px) {
+    display: table;
+  }
+}
+
+thead {
+  background: $color-box-background;
+  border-bottom: 2px solid $color-border;
+}
+
+th, td {
+  padding: 0.75em 1em;
+  text-align: left;
+  border-bottom: 1px solid $color-border;
+}
+
+th {
+  font-weight: 600;
+  color: $color-primary;
+}
+
+tr:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
