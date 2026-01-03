@@ -51,9 +51,10 @@ jobs:
           cp -r literature-notes/pages _notes/
           cp -r literature-notes/finances _notes/
 
-          # Copy assets for images to be accessible (relative paths like ../assets/ need _notes/assets/)
-          mkdir -p _notes/assets
-          cp -r literature-notes/assets/* _notes/assets/ 2>/dev/null || true
+          # Copy assets for images to be accessible
+          # Note pages use permalink: /:slug so ../assets/ resolves to /assets/ at root
+          mkdir -p assets
+          cp -r literature-notes/assets/* assets/ 2>/dev/null || true
 
           # Copy embedded assets from media content (videos have nested assets)
           if [ -d "literature-notes/content/media/videos/assets" ]; then
