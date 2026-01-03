@@ -18,7 +18,13 @@ cd literature-notes
 # Check if we should pull from remote
 if [[ "$1" != "--local" ]]; then
     echo "📥 Pulling latest changes from literature-notes repository..."
-    git pull origin main
+    # Clean untracked files that might block pull (logseq backups, etc.)
+    if ! git pull origin main 2>/dev/null; then
+        echo "⚠️  Pull blocked by untracked files. Cleaning logseq backups..."
+        git clean -fd logseq/bak/ 2>/dev/null || true
+        git clean -fd logseq/.recycle/ 2>/dev/null || true
+        git pull origin main
+    fi
 else
     echo "📝 Using local literature-notes changes..."
 fi

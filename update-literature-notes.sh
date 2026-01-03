@@ -6,7 +6,15 @@ set -e
 echo "Updating literature-notes submodule to latest..."
 
 cd literature-notes
-git pull origin main
+
+# Clean untracked files that might block pull (logseq backups, etc.)
+if ! git pull origin main 2>/dev/null; then
+    echo "⚠️  Pull blocked by untracked files. Cleaning..."
+    git clean -fd logseq/bak/ 2>/dev/null || true
+    git clean -fd logseq/.recycle/ 2>/dev/null || true
+    git pull origin main
+fi
+
 cd ..
 
 git add literature-notes
