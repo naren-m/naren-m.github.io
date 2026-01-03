@@ -147,12 +147,12 @@ code {
 
 // Table styles
 table {
-  width: 100%;
   border-collapse: collapse;
   margin: 1.5em 0;
   font-size: 0.95em;
   overflow-x: auto;
   display: block;
+  max-width: fit-content;
 
   @media (min-width: 600px) {
     display: table;
@@ -160,12 +160,12 @@ table {
 }
 
 thead {
-  background: $color-box-background;
-  border-bottom: 2px solid $color-border;
+  background: hsl(0, 0%, 95%);
+  border-bottom: 1px solid $color-border;
 }
 
 th, td {
-  padding: 0.75em 1em;
+  padding: 0.6em 1.2em;
   text-align: left;
   border-bottom: 1px solid $color-border;
 }
@@ -175,8 +175,16 @@ th {
   color: $color-primary;
 }
 
-tr:hover {
-  background: rgba(0, 0, 0, 0.02);
+tbody tr:nth-child(odd) {
+  background: hsl(0, 0%, 98%);
+}
+
+tbody tr:nth-child(even) {
+  background: hsl(0, 0%, 95%);
+}
+
+tbody tr:hover {
+  background: hsl(0, 0%, 92%);
 }
 
 tbody tr:last-child td {
