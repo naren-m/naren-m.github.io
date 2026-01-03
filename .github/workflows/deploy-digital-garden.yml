@@ -40,7 +40,7 @@ jobs:
       - name: Copy literature-notes to _notes
         run: |
           # Remove symlinks and copy actual content from submodule (reorganized structure)
-          rm -f _notes/computer-science _notes/sanskrit-literature _notes/history _notes/mathematics _notes/media _notes/people _notes/music _notes/pages
+          rm -f _notes/computer-science _notes/sanskrit-literature _notes/history _notes/mathematics _notes/media _notes/people _notes/music _notes/pages _notes/finances
           cp -r literature-notes/content/domains/computer-science _notes/
           cp -r literature-notes/content/domains/humanities/sanskrit-literature _notes/
           cp -r literature-notes/content/domains/humanities/history _notes/
@@ -49,6 +49,7 @@ jobs:
           cp -r literature-notes/content/people _notes/
           cp -r literature-notes/music _notes/
           cp -r literature-notes/pages _notes/
+          cp -r literature-notes/finances _notes/
 
       - name: Build Jekyll site
         run: bundle exec jekyll build --trace
