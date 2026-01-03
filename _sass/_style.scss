@@ -153,6 +153,7 @@ table {
   overflow-x: auto;
   display: block;
   max-width: fit-content;
+  border: 1px solid $color-border;
 
   @media (min-width: 600px) {
     display: table;
@@ -160,14 +161,13 @@ table {
 }
 
 thead {
-  background: hsl(0, 0%, 95%);
-  border-bottom: 1px solid $color-border;
+  background: hsl(0, 0%, 92%);
 }
 
 th, td {
   padding: 0.6em 1.2em;
   text-align: left;
-  border-bottom: 1px solid $color-border;
+  border: 1px solid $color-border;
 }
 
 th {
@@ -176,17 +176,9 @@ th {
 }
 
 tbody tr:nth-child(odd) {
-  background: hsl(0, 0%, 98%);
+  background: hsl(0, 0%, 100%);
 }
 
 tbody tr:nth-child(even) {
-  background: hsl(0, 0%, 95%);
-}
-
-tbody tr:hover {
-  background: hsl(0, 0%, 92%);
-}
-
-tbody tr:last-child td {
-  border-bottom: none;
+  background: hsl(0, 0%, 96%);
 }
