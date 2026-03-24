@@ -52,7 +52,7 @@ jobs:
           cp -r literature-notes/finances _notes/
 
           # Copy assets for images to be accessible
-          # Note pages use permalink: /:slug so ../assets/ resolves to /assets/ at root
+          # Note pages use permalink: /:slug/ so ../assets/ resolves to /assets/ at root
           mkdir -p assets
           cp -r literature-notes/assets/* assets/ 2>/dev/null || true
 
