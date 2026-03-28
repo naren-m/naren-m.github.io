@@ -39,32 +39,39 @@ jobs:
 
       - name: Copy literature-notes to _notes
         run: |
-          # Remove symlinks and copy actual content from submodule (reorganized structure)
+          # Remove symlinks (CI uses copied content, not symlinks)
           rm -f _notes/computer-science _notes/sanskrit-literature _notes/history _notes/mathematics _notes/media _notes/people _notes/music _notes/pages _notes/finances
-          cp -r literature-notes/content/domains/computer-science _notes/
-          cp -r literature-notes/content/domains/humanities/sanskrit-literature _notes/
-          cp -r literature-notes/content/domains/humanities/history _notes/
-          cp -r literature-notes/content/domains/mathematics _notes/
-          cp -r literature-notes/content/media _notes/
-          cp -r literature-notes/content/people _notes/
-          cp -r literature-notes/music _notes/
-          cp -r literature-notes/pages _notes/
-          cp -r literature-notes/finances _notes/
 
-          # Copy assets for images to be accessible
-          # Note pages use permalink: /:slug/ so ../assets/ resolves to /assets/ at root
-          mkdir -p assets
-          cp -r literature-notes/assets/* assets/ 2>/dev/null || true
+          if [ -d "literature-notes/content" ]; then
+            echo "Submodule available — copying literature-notes content"
+            cp -r literature-notes/content/domains/computer-science _notes/
+            cp -r literature-notes/content/domains/humanities/sanskrit-literature _notes/
+            cp -r literature-notes/content/domains/humanities/history _notes/
+            cp -r literature-notes/content/domains/mathematics _notes/
+            cp -r literature-notes/content/media _notes/
+            cp -r literature-notes/content/people _notes/
+            cp -r literature-notes/music _notes/ 2>/dev/null || true
+            cp -r literature-notes/pages _notes/ 2>/dev/null || true
+            cp -r literature-notes/finances _notes/ 2>/dev/null || true
 
-          # Copy embedded assets from media content (videos have nested assets)
-          if [ -d "literature-notes/content/media/videos/assets" ]; then
-            mkdir -p _notes/media/videos/assets
-            cp -r literature-notes/content/media/videos/assets/* _notes/media/videos/assets/
-          fi
+            # Copy assets for images to be accessible
+            # Note pages use permalink: /:slug/ so ../assets/ resolves to /assets/ at root
+            mkdir -p assets
+            cp -r literature-notes/assets/* assets/ 2>/dev/null || true
 
-          # Copy wellness/ayurveda images
-          if [ -d "literature-notes/content/domains/wellness" ]; then
-            cp -r literature-notes/content/domains/wellness _notes/
+            # Copy embedded assets from media content (videos have nested assets)
+            if [ -d "literature-notes/content/media/videos/assets" ]; then
+              mkdir -p _notes/media/videos/assets
+              cp -r literature-notes/content/media/videos/assets/* _notes/media/videos/assets/
+            fi
+
+            # Copy wellness/ayurveda images
+            if [ -d "literature-notes/content/domains/wellness" ]; then
+              cp -r literature-notes/content/domains/wellness _notes/
+            fi
+          else
+            echo "WARNING: literature-notes submodule not available — building with landing pages only"
+            ls -la literature-notes/ 2>/dev/null || echo "literature-notes directory does not exist"
           fi
 
       - name: Build Jekyll site
