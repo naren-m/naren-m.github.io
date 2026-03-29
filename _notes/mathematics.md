@@ -13,16 +13,16 @@ This collection contains **4 notes** on mathematical topics:
 
 ### 📐 Topics
 
-- **Statistics**: ARIMA models, exponential smoothing, time series analysis
-- **Foundational Concepts**: Mathematical principles and theory
-- **Sanskrit Mathematics**: Historical mathematical contributions from ancient India
+- **[[Statistics]]**: ARIMA models, exponential smoothing, time series analysis
+- **[[Foundational Concepts]]**: Mathematical principles and theory
+- **[[Sanskrit Mathematics]]**: Historical mathematical contributions from ancient India
 
 ### 🔗 Cross-Domain Connections
 
 Mathematics intersects with:
-- **Computer Science**: Algorithms and cryptography
-- **Sanskrit Literature**: Ancient mathematical texts and concepts
-- **Statistics**: Data analysis and modeling
+- **[[computer-science|Computer Science]]**: Algorithms and cryptography
+- **[[sanskrit-literature|Sanskrit Literature]]**: Ancient mathematical texts and concepts
+- **[[Statistics]]**: Data analysis and modeling
 
 ## 🔍 Explore
 
