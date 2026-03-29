@@ -20,8 +20,8 @@ This collection contains **3 notes** on historical and cultural topics:
 ### 🔗 Related Domains
 
 This domain connects with:
-- **Sanskrit Literature**: Classical texts and historical context
-- **People**: Historical figures and scholars
+- **[[sanskrit-literature|Sanskrit Literature]]**: Classical texts and historical context
+- **[[people|People]]**: Historical figures and scholars
 - **Philosophy**: Cultural and intellectual traditions
 
 ## 🔍 Explore

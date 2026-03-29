@@ -14,15 +14,15 @@ This collection contains **9 biographical notes** on influential figures:
 ### 📖 Notable People
 
 - **[[Panini]]** - Ancient Sanskrit grammarian and linguist
-- **Brian Kernighan** - Computer scientist, Unix pioneer
-- **Andrew Huberman** - Neuroscientist and science communicator
-- **Max Müller** - Sanskrit scholar and philologist
+- **[[Brian Kernighan]]** - Computer scientist, Unix pioneer
+- **[[Andrew Huberman]]** - Neuroscientist and science communicator
+- **[[Max Müller]]** - Sanskrit scholar and philologist
 - And others...
 
 ### 🎯 Domains Represented
 
-- **Sanskrit & Linguistics**: Classical scholars and grammarians
-- **Computer Science**: Pioneers in programming and Unix
+- **[[sanskrit-literature|Sanskrit & Linguistics]]**: Classical scholars and grammarians
+- **[[computer-science|Computer Science]]**: Pioneers in programming and Unix
 - **Science**: Researchers and communicators
 - **Philosophy**: Thinkers and spiritual leaders
 

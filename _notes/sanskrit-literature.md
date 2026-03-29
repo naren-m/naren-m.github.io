@@ -12,9 +12,9 @@ layout: note
 This collection contains **44 notes** covering:
 
 ### 📖 Classical Texts
-- **Ashtadhyayi** - Panini's Sanskrit grammar
-- **Nirukta** - Vedic etymology and interpretation
-- **Yoga Sutras** - Patanjali's philosophical framework
+- **[[Ashtadhyayi]]** - Panini's Sanskrit grammar
+- **[[Nirukta]]** - Vedic etymology and interpretation
+- **[[Yoga Sutras]]** - Patanjali's philosophical framework
 - Vedic literature and commentaries
 
 ### 🔤 Language & Grammar
