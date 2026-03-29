@@ -1,5 +1,5 @@
 title:               "Naren Mudivarthy's Digital Garden"
-url:                 "http://naren-m.github.io"
+url:                 "https://naren.me"
 include:             ['_pages']
 exclude:
   - '_includes/notes_graph.json'
