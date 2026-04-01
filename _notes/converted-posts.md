@@ -9,12 +9,16 @@ layout: note
 
 ## Posts
 
-- [[How Quantum Computers Break Encryption]]
-- [[Using Anaconda]]
-- [[Mahishasura Nardhini Stotram]]
-- [[Fibonacci Sequence]]
-- [[Project Euler Cli app]]
-- [[Test markdown]]
+{% assign blog_notes = site.notes | where_exp: "note", "note.path contains 'converted-posts/'" | sort: "title" %}
+{% if blog_notes.size > 0 %}
+<ul>
+{% for note in blog_notes %}
+  <li><a class="internal-link" href="{{ note.url }}">{{ note.title }}</a></li>
+{% endfor %}
+</ul>
+{% else %}
+_No posts available yet._
+{% endif %}
 
 ---
 

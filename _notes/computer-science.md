@@ -7,29 +7,20 @@ layout: note
 
 > Technical notes covering cryptography, security, algorithms, design patterns, and software engineering concepts.
 
-## 📚 Domains
+## 📚 All Notes
 
-This collection contains **59 notes** across four main areas:
+{% assign cs_notes = site.notes | where_exp: "note", "note.path contains 'computer-science/'" | sort: "title" %}
+{% if cs_notes.size > 0 %}
+This collection contains **{{ cs_notes.size }} notes**:
 
-### 🔐 Cryptography
-Security concepts, encryption algorithms, hashing, threat models, and cryptographic principles. Topics include:
-- CIA Triad (Confidentiality, Integrity, Availability)
-- Block ciphers and hashing algorithms
-- Authentication and digital signatures
-- Threat modeling (STRIDE framework)
-- Side channel attacks and vulnerabilities
-
-### 💻 Coding Practices
-Programming fundamentals, testing principles, and code maintenance:
-- Test-Driven Development (TDD)
-- Code maintenance strategies
-- Testing principles
-
-### 🏗️ Design Patterns
-Software architecture patterns and distributed systems design
-
-### 🛡️ Security
-Security vulnerabilities, authentication mechanisms, and protection strategies
+<ul>
+{% for note in cs_notes %}
+  <li><a class="internal-link" href="{{ note.url }}">{{ note.title }}</a></li>
+{% endfor %}
+</ul>
+{% else %}
+_No notes available yet in this section._
+{% endif %}
 
 ## 🔍 Explore
 

@@ -7,22 +7,25 @@ layout: note
 
 > Historical analysis, cultural studies, and Indological research.
 
-## 📚 Overview
+## 📚 All Notes
 
-This collection contains **3 notes** on historical and cultural topics:
+{% assign history_notes = site.notes | where_exp: "note", "note.path contains 'history/'" | sort: "title" %}
+{% if history_notes.size > 0 %}
+This collection contains **{{ history_notes.size }} notes**:
 
-### 🏛️ Focus Areas
-
-- **Indian History**: Cultural and historical analysis of India
-- **Indology**: Academic study of Indian culture, history, and literature
-- **Cultural Studies**: Interdisciplinary examination of cultural phenomena
+<ul>
+{% for note in history_notes %}
+  <li><a class="internal-link" href="{{ note.url }}">{{ note.title }}</a></li>
+{% endfor %}
+</ul>
+{% else %}
+_No notes available yet in this section._
+{% endif %}
 
 ### 🔗 Related Domains
 
-This domain connects with:
 - **[[sanskrit-literature|Sanskrit Literature]]**: Classical texts and historical context
 - **[[people|People]]**: Historical figures and scholars
-- **Philosophy**: Cultural and intellectual traditions
 
 ## 🔍 Explore
 

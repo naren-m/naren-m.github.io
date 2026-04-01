@@ -7,30 +7,20 @@ layout: note
 
 > Books, articles, videos, podcasts, and curated content highlights.
 
-## 📚 Overview
+## 📚 All Notes
 
-This collection contains **38+ items** across multiple media types:
+{% assign media_notes = site.notes | where_exp: "note", "note.path contains 'media/'" | sort: "title" %}
+{% if media_notes.size > 0 %}
+This collection contains **{{ media_notes.size }} items**:
 
-### 📖 Books
-Summaries, highlights, and references from books on:
-- Philosophy and personal development
-- Technology and programming
-- Science and research
-- Biography and history
-
-Notable books include:
-- Atomic Habits
-- Elon Musk biography
-- Technical and philosophical works
-
-### 📄 Articles
-Technical papers, RFCs, and research articles on computer science, security, and related topics.
-
-### 🎥 Videos
-Curated video content on technology, science, and education.
-
-### 🎙️ Podcasts
-Audio content covering various technical and philosophical topics.
+<ul>
+{% for note in media_notes %}
+  <li><a class="internal-link" href="{{ note.url }}">{{ note.title }}</a></li>
+{% endfor %}
+</ul>
+{% else %}
+_No notes available yet in this section._
+{% endif %}
 
 ## 🔍 Explore
 

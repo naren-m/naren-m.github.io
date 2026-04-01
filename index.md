@@ -54,6 +54,8 @@ Technical tutorials and cultural explorations
   {% endfor %}
 </ul>
 
+{% include popular-notes.html %}
+
 ## Knowledge Graph
 
 Explore connections between notes visually. Click nodes to navigate, hover to see relationships.

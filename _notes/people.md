@@ -7,17 +7,20 @@ layout: note
 
 > Notable thinkers, scholars, scientists, and contributors across various domains.
 
-## 📚 Overview
+## 📚 All Notes
 
-This collection contains **9 biographical notes** on influential figures:
+{% assign people_notes = site.notes | where_exp: "note", "note.path contains 'people/'" | sort: "title" %}
+{% if people_notes.size > 0 %}
+This collection contains **{{ people_notes.size }} biographical notes**:
 
-### 📖 Notable People
-
-- **[[Panini]]** - Ancient Sanskrit grammarian and linguist
-- **[[Brian Kernighan]]** - Computer scientist, Unix pioneer
-- **[[Andrew Huberman]]** - Neuroscientist and science communicator
-- **[[Max Müller]]** - Sanskrit scholar and philologist
-- And others...
+<ul>
+{% for note in people_notes %}
+  <li><a class="internal-link" href="{{ note.url }}">{{ note.title }}</a></li>
+{% endfor %}
+</ul>
+{% else %}
+_No notes available yet in this section._
+{% endif %}
 
 ### 🎯 Domains Represented
 
