@@ -7,22 +7,26 @@ layout: note
 
 > Mathematical concepts, foundations, and connections to Sanskrit knowledge.
 
-## 📚 Overview
+## 📚 All Notes
 
-This collection contains **4 notes** on mathematical topics:
+{% assign math_notes = site.notes | where_exp: "note", "note.path contains 'mathematics/'" | sort: "title" %}
+{% if math_notes.size > 0 %}
+This collection contains **{{ math_notes.size }} notes**:
 
-### 📐 Topics
-
-- **[[Statistics]]**: ARIMA models, exponential smoothing, time series analysis
-- **[[Foundational Concepts]]**: Mathematical principles and theory
-- **[[Sanskrit Mathematics]]**: Historical mathematical contributions from ancient India
+<ul>
+{% for note in math_notes %}
+  <li><a class="internal-link" href="{{ note.url }}">{{ note.title }}</a></li>
+{% endfor %}
+</ul>
+{% else %}
+_No notes available yet in this section._
+{% endif %}
 
 ### 🔗 Cross-Domain Connections
 
 Mathematics intersects with:
 - **[[computer-science|Computer Science]]**: Algorithms and cryptography
 - **[[sanskrit-literature|Sanskrit Literature]]**: Ancient mathematical texts and concepts
-- **[[Statistics]]**: Data analysis and modeling
 
 ## 🔍 Explore
 

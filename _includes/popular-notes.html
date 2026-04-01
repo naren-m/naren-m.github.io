@@ -1,0 +1,66 @@
+<div id="popular-notes-section" style="display:none;">
+  <h2>Most Visited Notes</h2>
+  <ul id="most-visited-list"></ul>
+
+  <h2>Least Visited Notes</h2>
+  <ul id="least-visited-list"></ul>
+</div>
+
+<script>
+(function() {
+  function renderPopularNotes() {
+    if (typeof window.dgGetSortedVisits !== 'function') return;
+
+    var allVisits = window.dgGetSortedVisits('desc');
+
+    // Only show section if user has visited at least 3 unique pages
+    if (allVisits.length < 3) return;
+
+    var section = document.getElementById('popular-notes-section');
+    var mostList = document.getElementById('most-visited-list');
+    var leastList = document.getElementById('least-visited-list');
+
+    // Top 10 most visited
+    var top = allVisits.slice(0, 10);
+    for (var i = 0; i < top.length; i++) {
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.className = 'internal-link';
+      a.href = top[i].path;
+      a.textContent = top[i].title;
+      li.appendChild(a);
+      var span = document.createElement('span');
+      span.style.color = '#888';
+      span.style.fontSize = '0.85em';
+      span.textContent = ' (' + top[i].count + ' visits)';
+      li.appendChild(span);
+      mostList.appendChild(li);
+    }
+
+    // Bottom 5 least visited (ascending order)
+    var bottom = window.dgGetSortedVisits('asc').slice(0, 5);
+    for (var j = 0; j < bottom.length; j++) {
+      var li2 = document.createElement('li');
+      var a2 = document.createElement('a');
+      a2.className = 'internal-link';
+      a2.href = bottom[j].path;
+      a2.textContent = bottom[j].title;
+      li2.appendChild(a2);
+      var span2 = document.createElement('span');
+      span2.style.color = '#888';
+      span2.style.fontSize = '0.85em';
+      span2.textContent = ' (' + bottom[j].count + ' visits)';
+      li2.appendChild(span2);
+      leastList.appendChild(li2);
+    }
+
+    section.style.display = 'block';
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', renderPopularNotes);
+  } else {
+    renderPopularNotes();
+  }
+})();
+</script>

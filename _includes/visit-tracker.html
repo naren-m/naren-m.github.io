@@ -1,0 +1,60 @@
+<script>
+(function() {
+  var STORAGE_KEY = 'dg_page_visits';
+
+  function getVisitData() {
+    try {
+      var data = localStorage.getItem(STORAGE_KEY);
+      return data ? JSON.parse(data) : {};
+    } catch(e) {
+      return {};
+    }
+  }
+
+  function saveVisitData(data) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    } catch(e) {}
+  }
+
+  function recordVisit() {
+    var path = window.location.pathname;
+    // Skip homepage
+    if (path === '/' || path === '') return;
+
+    var data = getVisitData();
+    var title = document.title.split(' — ')[0].trim();
+
+    if (!data[path]) {
+      data[path] = { count: 0, title: title, lastVisit: '' };
+    }
+
+    data[path].count += 1;
+    data[path].title = title;
+    data[path].lastVisit = new Date().toISOString().split('T')[0];
+
+    saveVisitData(data);
+  }
+
+  // Expose for popular-notes.html
+  window.dgGetVisitData = getVisitData;
+
+  window.dgGetSortedVisits = function(order) {
+    var data = getVisitData();
+    var entries = [];
+    for (var path in data) {
+      if (data.hasOwnProperty(path)) {
+        entries.push({ path: path, count: data[path].count, title: data[path].title, lastVisit: data[path].lastVisit });
+      }
+    }
+    if (order === 'asc') {
+      entries.sort(function(a, b) { return a.count - b.count; });
+    } else {
+      entries.sort(function(a, b) { return b.count - a.count; });
+    }
+    return entries;
+  };
+
+  recordVisit();
+})();
+</script>
