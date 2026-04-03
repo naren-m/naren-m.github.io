@@ -34,8 +34,17 @@ _No notes available yet in this section._
 
 ### 📚 Related People
 Notable scholars and contributors:
-- [[Panini]] - Sanskrit grammarian
+
+{% assign people_notes = site.notes | where_exp: "note", "note.path contains 'people/'" | sort: "title" %}
+{% if people_notes.size > 0 %}
+<ul>
+{% for note in people_notes %}
+  <li><a class="internal-link" href="{{ note.url }}">{{ note.title }}</a></li>
+{% endfor %}
+</ul>
+{% else %}
 - Classical commentators and philosophers
+{% endif %}
 
 ## 🔍 Explore
 
