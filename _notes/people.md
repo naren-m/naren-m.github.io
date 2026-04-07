@@ -7,27 +7,33 @@ layout: note
 
 > Notable thinkers, scholars, scientists, and contributors across various domains.
 
-## 📚 All Notes
+## 📖 Notable People
 
-{% assign people_notes = site.notes | where_exp: "note", "note.path contains 'people/'" | sort: "title" %}
-{% if people_notes.size > 0 %}
-This collection contains **{{ people_notes.size }} biographical notes**:
-
-<ul>
-{% for note in people_notes %}
-  <li><a class="internal-link" href="{{ note.url }}">{{ note.title }}</a></li>
-{% endfor %}
-</ul>
-{% else %}
-_No notes available yet in this section._
-{% endif %}
+- [[Panini]] - Ancient Sanskrit grammarian and linguist
+- [[Brian Kernighan]] - Computer scientist, Unix pioneer
+- [[Andrew Huberman]] - Neuroscientist and science communicator
+- [[Max Muller]] - Sanskrit scholar and philologist
+- [[Alexander Cunningham]] - Archaeologist and historian
+- [[Ashoka]] - Maurya Emperor
+- [[Bill joy]] - Computer scientist and Sun Microsystems co-founder
+- [[Marthanda Varma]] - King of Travancore
+- [[Brian Kernighan interview]] - Interview notes
 
 ### 🎯 Domains Represented
 
 - **[[sanskrit-literature|Sanskrit & Linguistics]]**: Classical scholars and grammarians
 - **[[computer-science|Computer Science]]**: Pioneers in programming and Unix
-- **Science**: Researchers and communicators
-- **Philosophy**: Thinkers and spiritual leaders
+
+## 📚 All Notes
+
+{% assign people_notes = site.notes | where_exp: "note", "note.path contains 'people/'" | sort: "title" %}
+{% if people_notes.size > 0 %}
+<ul>
+{% for note in people_notes %}
+  <li><a class="internal-link" href="{{ note.url }}">{{ note.title }}</a></li>
+{% endfor %}
+</ul>
+{% endif %}
 
 ## 🔍 Explore
 

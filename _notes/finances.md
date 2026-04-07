@@ -9,18 +9,17 @@ layout: note
 
 ## 📚 Topics
 
-This collection covers practical approaches to financial planning:
+- [[three_bucket_investment_strategy]] - Three Bucket Strategy for retirement income
 
-### 💰 Investment Strategies
-- Three Bucket Strategy for retirement income
-- Income Stability Ratio (ISR) calculations
-- FIRE (Financial Independence, Retire Early) planning
-- Market volatility protection
-
-### 📊 Concepts
-- Corpus planning and withdrawal strategies
-- Risk management across different market conditions
-- Tax-efficient investment approaches
+{% assign finance_notes = site.notes | where_exp: "note", "note.path contains 'finances/'" | sort: "title" %}
+{% if finance_notes.size > 0 %}
+### All Notes
+<ul>
+{% for note in finance_notes %}
+  <li><a class="internal-link" href="{{ note.url }}">{{ note.title }}</a></li>
+{% endfor %}
+</ul>
+{% endif %}
 
 ## 🔍 Explore
 
