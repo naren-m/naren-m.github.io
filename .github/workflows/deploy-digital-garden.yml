@@ -69,6 +69,9 @@ jobs:
             if [ -d "literature-notes/content/domains/wellness" ]; then
               cp -r literature-notes/content/domains/wellness _notes/
             fi
+
+            # Remove files with non-ASCII characters in names (cause Jekyll encoding errors)
+            find _notes/ -name "*.md" -exec sh -c 'echo "$1" | LC_ALL=C grep -q "[^[:print:][:space:]]" && rm -v "$1"' _ {} \; 2>/dev/null || true
           else
             echo "WARNING: literature-notes submodule not available — building with landing pages only"
             ls -la literature-notes/ 2>/dev/null || echo "literature-notes directory does not exist"
