@@ -41,7 +41,7 @@ Patanjali — whether one person or several — represents a towering contributi
 ## See Also
 
 - [[sanskrit-literature|Sanskrit Literature]]
-- [[yoga-sutras|Yoga Sutras]]
+- [[YogaSutras|Yoga Sutras]]
 
 ## References
 
