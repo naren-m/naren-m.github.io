@@ -40,29 +40,30 @@ class BidirectionalLinksGenerator < Jekyll::Generator
 
         # Replace double-bracketed links with label using note title
         # [[A note about cats|this is a link to the note about cats]]
+        # Also handles spaces inside brackets: [[ A note about cats | link text ]]
         current_note.content.gsub!(
-          /\[\[#{note_title_regexp_pattern}\|(.+?)(?=\])\]\]/i,
+          /\[\[\s*#{note_title_regexp_pattern}\s*\|\s*(.+?)(?=\s*\])\s*\]\]/i,
           anchor_tag
         )
 
         # Replace double-bracketed links with label using note filename
         # [[cats|this is a link to the note about cats]]
         current_note.content.gsub!(
-          /\[\[#{title_from_data}\|(.+?)(?=\])\]\]/i,
+          /\[\[\s*#{title_from_data}\s*\|\s*(.+?)(?=\s*\])\s*\]\]/i,
           anchor_tag
         )
 
         # Replace double-bracketed links using note title
-        # [[a note about cats]]
+        # [[a note about cats]] or [[ a note about cats ]]
         current_note.content.gsub!(
-          /\[\[(#{title_from_data})\]\]/i,
+          /\[\[\s*(#{title_from_data})\s*\]\]/i,
           anchor_tag
         )
 
         # Replace double-bracketed links using note filename
-        # [[cats]]
+        # [[cats]] or [[ cats ]]
         current_note.content.gsub!(
-          /\[\[(#{note_title_regexp_pattern})\]\]/i,
+          /\[\[\s*(#{note_title_regexp_pattern})\s*\]\]/i,
           anchor_tag
         )
       end
@@ -71,7 +72,7 @@ class BidirectionalLinksGenerator < Jekyll::Generator
       # pointing to non-existing pages, so let's turn them into disabled
       # links by greying them out and changing the cursor
       current_note.content = current_note.content.gsub(
-        /\[\[([^\]]+)\]\]/i, # match on the remaining double-bracket links
+        /\[\[\s*([^\]]+?)\s*\]\]/i, # match on the remaining double-bracket links, trimming spaces
         <<~HTML.delete("\n") # replace with this HTML (\\1 is what was inside the brackets)
           <span title='There is no note that matches this link.' class='invalid-link'>
             <span class='invalid-link-brackets'>[[</span>
