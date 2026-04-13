@@ -37,17 +37,10 @@ Technical tutorials and cultural explorations
 ## Recently Updated Notes
 
 <ul>
-  {% assign all_notes = site.notes %}
-  {% assign notes_with_dates = all_notes | where_exp: "note", "note.date" | sort: "date" | reverse %}
-  {% assign notes_without_dates = all_notes | where_exp: "note", "note.date == nil" | sort: "last_modified_at_timestamp" | reverse %}
-  {% assign recent_notes = notes_with_dates | concat: notes_without_dates %}
+  {% assign recent_notes = site.notes | sort: "last_modified_at_timestamp" | reverse %}
 
   {% for note in recent_notes limit: 10 %}
-    {% if note.date %}
-      {% assign display_date = note.date | date: "%Y-%m-%d" %}
-    {% else %}
-      {% assign display_date = note.last_modified_at | date: "%Y-%m-%d" %}
-    {% endif %}
+    {% assign display_date = note.last_modified_at_timestamp | date: "%Y-%m-%d" %}
     <li>
       {{ display_date }} — <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a>
     </li>
