@@ -40,7 +40,13 @@ jobs:
       - name: Copy literature-notes to _notes
         run: |
           # Remove symlinks (CI uses copied content, not symlinks)
-          rm -f _notes/computer-science _notes/sanskrit-literature _notes/history _notes/mathematics _notes/media _notes/people _notes/music _notes/pages _notes/finances
+          # Only remove symlinks; real directories (e.g. people/) are kept so
+          # repo-only files like patanjali.md are preserved and cp -r merges into them
+          for item in _notes/computer-science _notes/sanskrit-literature _notes/history _notes/mathematics _notes/media _notes/people _notes/music _notes/pages _notes/finances; do
+            if [ -L "$item" ]; then
+              rm -f "$item"
+            fi
+          done
 
           if [ -d "literature-notes/content" ]; then
             echo "Submodule available — copying literature-notes content"
