@@ -5,8 +5,9 @@ layout: default
 <article>
   <div>
     <h1>{{ page.title }}</h1>
-    <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{% if page.type != 'pages' %}
-      Last updated on {{ page.last_modified_at | date: "%B %-d, %Y" }}
+    {% assign last_updated = page.last_modified_at_timestamp | default: page.last_modified_at %}
+    <time datetime="{{ last_updated | date_to_xmlschema }}">{% if page.type != 'pages' %}
+      Last updated on {{ last_updated | date: "%B %-d, %Y" }}
       {% endif %}
     </time>
   </div>
