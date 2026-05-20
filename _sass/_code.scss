@@ -1,5 +1,5 @@
 .highlight  {
-  background: #f8f8f8;
+  background: var(--color-code-bg);
   padding: 1px 1em;
   border-radius: 3px;
   font-size: 1em;
@@ -8,7 +8,32 @@
   margin: 1em -1em;
   code{
     padding: 0;
+    background: transparent;
   }
+}
+
+[data-theme="dark"] .highlight {
+  .err { color: #ff8888; background-color: transparent; }
+  .gd { color: #ffaaaa; background-color: transparent; }
+  .gd .x { color: #ffaaaa; background-color: transparent; }
+  .gi { color: #aaffaa; background-color: transparent; }
+  .gi .x { color: #aaffaa; background-color: transparent; }
+  .nt { color: #88aaff; }
+  .nb { color: #66c0d0; }
+  .na { color: #5bbf8f; }
+  .nc, .kt { color: #c0a4d6; }
+  .nf, .ne { color: #ff8e87; }
+  .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx, .dl { color: #ffb86c; }
+  .sr { color: #98e88a; }
+  .ss { color: #d77af0; }
+  .m, .mf, .mh, .mi, .mo, .il { color: #5bc6c6; }
+  .no, .nv, .vc, .vg, .vi { color: #5bbf8f; }
+  .c, .cm, .c1, .cs, .cp { color: #888888; }
+  .gh, .gu, .nn { color: #aaaaaa; }
+  .gp { color: #999999; }
+  .go { color: #aaaaaa; }
+  .gr, .gt { color: #ff8888; }
+  .w { color: #555555; }
 }
 
 div.highlight {
