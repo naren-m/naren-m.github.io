@@ -1,11 +1,82 @@
-$color-primary: hsl(0, 0%, 10%);
-$color-text: hsl(0, 0%, 20%);
-$color-subtext: hsl(0, 0%, 30%);
-$color-border: hsl(0, 0%, 85%);
-$color-box-background: mix($color-primary, white, 4%);
+:root {
+  --color-primary: hsl(0, 0%, 10%);
+  --color-text: hsl(0, 0%, 20%);
+  --color-subtext: hsl(0, 0%, 30%);
+  --color-border: hsl(0, 0%, 85%);
+  --color-background: hsl(0, 0%, 100%);
+  --color-box-background: hsl(0, 0%, 96.4%);
+  --color-link-hover-bg: #fffaf1;
+  --color-focus-bg: #ffe8bc;
+  --color-focus-text: black;
+  --color-link-arrow: #aaaaaa;
+  --color-code-bg: #f5f5f5;
+  --color-invalid-link: #444444;
+  --color-invalid-link-bg: #fafafa;
+  --color-invalid-link-brackets: #cccccc;
+  --color-table-head-bg: hsl(0, 0%, 92%);
+  --color-table-row-odd: hsl(0, 0%, 100%);
+  --color-table-row-even: hsl(0, 0%, 96%);
+  --color-footer-text: hsl(0, 0%, 36%);
+  --color-internal-link-bg: #efefff;
+  --color-internal-link-border: #8b88e6;
+  --color-tooltip-bg: #ffffff;
+  --color-tooltip-border: #dddddd;
+  --color-tooltip-fade: 255, 255, 255;
+  --color-tooltip-shadow: rgba(0, 0, 0, 0.1);
+  --color-search-bg: #f5f7ff;
+  --color-search-result-bg: #ffffff;
+  --color-search-input-border: #dddddd;
+  --color-search-meta: #666666;
+  --color-graph-bg: #fcfcfc;
+  --color-graph-link: #cccccc;
+  --color-graph-node: #8b88e6;
+  --color-graph-text: #333333;
+  --color-graph-text-stroke: #fafafabb;
+}
+
+[data-theme="dark"] {
+  --color-primary: hsl(0, 0%, 92%);
+  --color-text: hsl(0, 0%, 84%);
+  --color-subtext: hsl(0, 0%, 65%);
+  --color-border: hsl(0, 0%, 28%);
+  --color-background: hsl(220, 13%, 12%);
+  --color-box-background: hsl(220, 13%, 17%);
+  --color-link-hover-bg: hsl(40, 30%, 22%);
+  --color-focus-bg: hsl(40, 80%, 30%);
+  --color-focus-text: hsl(0, 0%, 100%);
+  --color-link-arrow: hsl(0, 0%, 55%);
+  --color-code-bg: hsl(220, 13%, 20%);
+  --color-invalid-link: hsl(0, 0%, 70%);
+  --color-invalid-link-bg: hsl(220, 13%, 18%);
+  --color-invalid-link-brackets: hsl(0, 0%, 45%);
+  --color-table-head-bg: hsl(220, 13%, 22%);
+  --color-table-row-odd: hsl(220, 13%, 14%);
+  --color-table-row-even: hsl(220, 13%, 17%);
+  --color-footer-text: hsl(0, 0%, 60%);
+  --color-internal-link-bg: hsl(240, 30%, 22%);
+  --color-internal-link-border: #8b88e6;
+  --color-tooltip-bg: hsl(220, 13%, 17%);
+  --color-tooltip-border: hsl(0, 0%, 28%);
+  --color-tooltip-fade: 30, 33, 41;
+  --color-tooltip-shadow: rgba(0, 0, 0, 0.5);
+  --color-search-bg: hsl(220, 13%, 17%);
+  --color-search-result-bg: hsl(220, 13%, 20%);
+  --color-search-input-border: hsl(0, 0%, 32%);
+  --color-search-meta: hsl(0, 0%, 65%);
+  --color-graph-bg: hsl(220, 13%, 15%);
+  --color-graph-link: hsl(0, 0%, 40%);
+  --color-graph-node: #a5a3ea;
+  --color-graph-text: hsl(0, 0%, 88%);
+  --color-graph-text-stroke: hsla(220, 13%, 12%, 0.8);
+}
+
 $border-radius: 4px;
 $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
   sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+
+html {
+  background: var(--color-background);
+}
 
 body {
   box-sizing: content-box;
@@ -14,9 +85,11 @@ body {
   line-height: 1.7;
   padding: 4vh 6vw;
   overflow-x: hidden;
-  color: $color-text;
+  background: var(--color-background);
+  color: var(--color-text);
   font-size: 1rem;
   max-width: 63em;
+  transition: background 200ms ease, color 200ms ease;
 
   @media (min-width: 820px) {
     font-size: 1.2rem;
@@ -25,14 +98,14 @@ body {
 
 time {
   display: block;
-  color: $color-subtext;
+  color: var(--color-subtext);
   margin: 0.5em 0 1em;
 }
 
 footer {
   margin: 2em 0;
   font-size: 0.8em;
-  color: mix($color-text, white, 80%);
+  color: var(--color-footer-text);
   padding-top: 1em;
 }
 
@@ -48,7 +121,7 @@ blockquote {
   padding: 1.5em;
   margin: 0;
   font-size: 0.88em;
-  background: $color-box-background;
+  background: var(--color-box-background);
   border-radius: $border-radius;
 
   p {
@@ -61,7 +134,7 @@ hr {
   border: 0;
   height: 1px;
   margin: 1.5em 0;
-  background: $color-border;
+  background: var(--color-border);
 }
 
 h1,
@@ -73,24 +146,25 @@ h6 {
   line-height: 1.3;
   margin-bottom: 0;
   padding-bottom: 0;
+  color: var(--color-primary);
 }
 
 a {
   transition: background 300ms;
   padding: 0 0.1em;
   text-decoration: none;
-  border-bottom: 1px solid $color-border;
-  color: $color-primary;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-primary);
   &:hover {
-    color: black !important;
-    background: #fffaf1;
+    color: var(--color-primary) !important;
+    background: var(--color-link-hover-bg);
   }
   &:after {
     position: relative;
     top: -0.5em;
     font-size: 0.7em;
     content: "↗";
-    color: #aaaaaa;
+    color: var(--color-link-arrow);
   }
   &.internal-link:after,
   &.footnote:after,
@@ -100,12 +174,40 @@ a {
 }
 
 *:focus {
-  background: #ffe8bc !important;
-  color: black !important;
+  background: var(--color-focus-bg) !important;
+  color: var(--color-focus-text) !important;
 }
 
 nav {
   margin: 1em 0 3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+#theme-toggle {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 0.35em 0.6em;
+  border-radius: $border-radius;
+  font-size: 1em;
+  line-height: 1;
+  transition: background 200ms ease, border-color 200ms ease, color 200ms ease;
+
+  &:hover {
+    background: var(--color-box-background);
+  }
+
+  .theme-icon-dark { display: none; }
+  .theme-icon-light { display: inline; }
+}
+
+[data-theme="dark"] #theme-toggle {
+  .theme-icon-dark { display: inline; }
+  .theme-icon-light { display: none; }
 }
 
 #notes-entry-container {
@@ -122,30 +224,29 @@ nav {
 }
 
 .backlink-box {
-  background: $color-box-background;
+  background: var(--color-box-background);
   padding: 1em;
   border-radius: $border-radius;
 }
 
 code {
-  background: #f5f5f5;
+  background: var(--color-code-bg);
   padding: 0.1em 0.2em;
   border-radius: 4px;
 }
 
 .invalid-link {
-  color: #444444;
+  color: var(--color-invalid-link);
   cursor: help;
-  background: #fafafa;
+  background: var(--color-invalid-link-bg);
   padding: 0 0.1em;
 }
 
 .invalid-link-brackets {
-  color: #ccc;
+  color: var(--color-invalid-link-brackets);
   cursor: help;
 }
 
-// Table styles
 table {
   border-collapse: collapse;
   margin: 1.5em 0;
@@ -153,7 +254,7 @@ table {
   overflow-x: auto;
   display: block;
   max-width: fit-content;
-  border: 1px solid $color-border;
+  border: 1px solid var(--color-border);
 
   @media (min-width: 600px) {
     display: table;
@@ -161,24 +262,24 @@ table {
 }
 
 thead {
-  background: hsl(0, 0%, 92%);
+  background: var(--color-table-head-bg);
 }
 
 th, td {
   padding: 0.6em 1.2em;
   text-align: left;
-  border: 1px solid $color-border;
+  border: 1px solid var(--color-border);
 }
 
 th {
   font-weight: 600;
-  color: $color-primary;
+  color: var(--color-primary);
 }
 
 tbody tr:nth-child(odd) {
-  background: hsl(0, 0%, 100%);
+  background: var(--color-table-row-odd);
 }
 
 tbody tr:nth-child(even) {
-  background: hsl(0, 0%, 96%);
+  background: var(--color-table-row-even);
 }

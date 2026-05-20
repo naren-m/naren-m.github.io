@@ -1,25 +1,29 @@
 <style>
   .links line {
-    stroke: #ccc;
+    stroke: var(--color-graph-link, #ccc);
     opacity: 0.5;
   }
 
   .nodes circle {
     cursor: pointer;
-    fill: #8b88e6;
+    fill: var(--color-graph-node, #8b88e6);
     transition: all 0.15s ease-out;
   }
 
   .text text {
     cursor: pointer;
-    fill: #333;
-    text-shadow: -1px -1px 0 #fafafabb, 1px -1px 0 #fafafabb, -1px 1px 0 #fafafabb, 1px 1px 0 #fafafabb;
+    fill: var(--color-graph-text, #333);
+    text-shadow:
+      -1px -1px 0 var(--color-graph-text-stroke, #fafafabb),
+      1px -1px 0 var(--color-graph-text-stroke, #fafafabb),
+      -1px 1px 0 var(--color-graph-text-stroke, #fafafabb),
+      1px 1px 0 var(--color-graph-text-stroke, #fafafabb);
   }
 
   .nodes [active],
   .text [active] {
     cursor: pointer;
-    fill: black;
+    fill: var(--color-primary, black);
   }
 
   .inactive {
@@ -28,11 +32,11 @@
   }
 
   #graph-wrapper {
-    background: #fcfcfc;
+    background: var(--color-graph-bg, #fcfcfc);
     border-radius: 4px;
     height: auto;
   }
-  
+
   #graph-wrapper > svg {
     max-width: 100%;
     display: block;
