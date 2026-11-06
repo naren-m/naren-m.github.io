@@ -134,7 +134,7 @@
 
       // Display title matches
       if (titleMatches.length > 0) {
-        html += '<div style="margin-bottom: 1.5em;"><h3 style="font-size: 1em; color: #8b88e6; margin: 0.5em 0;">Title Matches</h3>';
+        html += '<div style="margin-bottom: 1.5em;"><h3 style="font-size: 1em; color: var(--color-accent, #4a7c59); margin: 0.5em 0;">Title Matches</h3>';
         html += titleMatches.map(result => {
           const note = result.item;
           const score = Math.round((1 - result.score) * 100);
@@ -144,7 +144,7 @@
             <div class="search-result-item">
               <h4>
                 <a href="${note.url}">${note.title}</a>
-                <span style="font-size: 0.7em; color: #999; font-weight: normal; margin-left: 0.5em;">${score}%</span>
+                <span style="font-size: 0.7em; color: var(--color-search-meta, #888); font-weight: normal; margin-left: 0.5em;">${score}%</span>
               </h4>
               <p>${excerpt}</p>
             </div>
@@ -155,7 +155,7 @@
 
       // Display content matches
       if (contentMatches.length > 0) {
-        html += '<div><h3 style="font-size: 1em; color: #8b88e6; margin: 0.5em 0;">Content Matches</h3>';
+        html += '<div><h3 style="font-size: 1em; color: var(--color-accent, #4a7c59); margin: 0.5em 0;">Content Matches</h3>';
         html += contentMatches.map(result => {
           const note = result.item;
           const score = Math.round((1 - result.score) * 100);
@@ -165,7 +165,7 @@
             <div class="search-result-item">
               <h4>
                 <a href="${note.url}">${note.title}</a>
-                <span style="font-size: 0.7em; color: #999; font-weight: normal; margin-left: 0.5em;">${score}%</span>
+                <span style="font-size: 0.7em; color: var(--color-search-meta, #888); font-weight: normal; margin-left: 0.5em;">${score}%</span>
               </h4>
               <p>${excerpt}</p>
             </div>
