@@ -1,11 +1,11 @@
-// Forest theme: cream paper, moss and pine greens, bark-brown accents.
+// Forest theme: white page in light mode, moss and pine green accents.
 :root {
   --color-primary: hsl(150, 30%, 16%);
   --color-text: hsl(140, 14%, 22%);
   --color-subtext: hsl(120, 8%, 38%);
   --color-border: hsl(90, 16%, 80%);
-  --color-background: hsl(45, 38%, 96%);
-  --color-box-background: hsl(85, 28%, 91%);
+  --color-background: hsl(0, 0%, 100%);
+  --color-box-background: hsl(95, 30%, 95%);
   --color-accent: hsl(140, 30%, 34%);
   --color-accent-soft: hsl(95, 30%, 86%);
   --color-link-hover-bg: hsl(95, 35%, 88%);
@@ -14,27 +14,27 @@
   --color-link-arrow: hsl(30, 25%, 55%);
   --color-code-bg: hsl(80, 20%, 90%);
   --color-invalid-link: hsl(30, 15%, 35%);
-  --color-invalid-link-bg: hsl(45, 30%, 92%);
+  --color-invalid-link-bg: hsl(0, 0%, 96%);
   --color-invalid-link-brackets: hsl(40, 15%, 72%);
   --color-table-head-bg: hsl(90, 22%, 86%);
-  --color-table-row-odd: hsl(45, 38%, 97%);
-  --color-table-row-even: hsl(85, 25%, 93%);
+  --color-table-row-odd: hsl(0, 0%, 100%);
+  --color-table-row-even: hsl(95, 25%, 96%);
   --color-footer-text: hsl(120, 8%, 40%);
   --color-internal-link-bg: hsl(95, 35%, 88%);
   --color-internal-link-border: hsl(140, 30%, 40%);
-  --color-tooltip-bg: hsl(45, 40%, 98%);
+  --color-tooltip-bg: hsl(0, 0%, 100%);
   --color-tooltip-border: hsl(90, 16%, 78%);
-  --color-tooltip-fade: 250, 248, 241;
+  --color-tooltip-fade: 255, 255, 255;
   --color-tooltip-shadow: rgba(31, 58, 43, 0.12);
-  --color-search-bg: hsl(85, 28%, 92%);
-  --color-search-result-bg: hsl(45, 40%, 98%);
+  --color-search-bg: hsl(95, 30%, 95%);
+  --color-search-result-bg: hsl(0, 0%, 100%);
   --color-search-input-border: hsl(90, 16%, 76%);
   --color-search-meta: hsl(120, 8%, 40%);
-  --color-graph-bg: hsl(45, 38%, 97%);
+  --color-graph-bg: hsl(95, 20%, 98.5%);
   --color-graph-link: hsl(90, 18%, 76%);
   --color-graph-node: hsl(140, 32%, 38%);
   --color-graph-text: hsl(150, 25%, 18%);
-  --color-graph-text-stroke: hsla(45, 38%, 97%, 0.8);
+  --color-graph-text-stroke: hsla(0, 0%, 100%, 0.8);
 }
 
 [data-theme="dark"] {
