@@ -1,78 +1,85 @@
+// Forest theme: cream paper, moss and pine greens, bark-brown accents.
 :root {
-  --color-primary: hsl(0, 0%, 10%);
-  --color-text: hsl(0, 0%, 20%);
-  --color-subtext: hsl(0, 0%, 30%);
-  --color-border: hsl(0, 0%, 85%);
-  --color-background: hsl(0, 0%, 100%);
-  --color-box-background: hsl(0, 0%, 96.4%);
-  --color-link-hover-bg: #fffaf1;
-  --color-focus-bg: #ffe8bc;
-  --color-focus-text: black;
-  --color-link-arrow: #aaaaaa;
-  --color-code-bg: #f5f5f5;
-  --color-invalid-link: #444444;
-  --color-invalid-link-bg: #fafafa;
-  --color-invalid-link-brackets: #cccccc;
-  --color-table-head-bg: hsl(0, 0%, 92%);
-  --color-table-row-odd: hsl(0, 0%, 100%);
-  --color-table-row-even: hsl(0, 0%, 96%);
-  --color-footer-text: hsl(0, 0%, 36%);
-  --color-internal-link-bg: #efefff;
-  --color-internal-link-border: #8b88e6;
-  --color-tooltip-bg: #ffffff;
-  --color-tooltip-border: #dddddd;
-  --color-tooltip-fade: 255, 255, 255;
-  --color-tooltip-shadow: rgba(0, 0, 0, 0.1);
-  --color-search-bg: #f5f7ff;
-  --color-search-result-bg: #ffffff;
-  --color-search-input-border: #dddddd;
-  --color-search-meta: #666666;
-  --color-graph-bg: #fcfcfc;
-  --color-graph-link: #cccccc;
-  --color-graph-node: #8b88e6;
-  --color-graph-text: #333333;
-  --color-graph-text-stroke: #fafafabb;
+  --color-primary: hsl(150, 30%, 16%);
+  --color-text: hsl(140, 14%, 22%);
+  --color-subtext: hsl(120, 8%, 38%);
+  --color-border: hsl(90, 16%, 80%);
+  --color-background: hsl(45, 38%, 96%);
+  --color-box-background: hsl(85, 28%, 91%);
+  --color-accent: hsl(140, 30%, 34%);
+  --color-accent-soft: hsl(95, 30%, 86%);
+  --color-link-hover-bg: hsl(95, 35%, 88%);
+  --color-focus-bg: hsl(45, 85%, 80%);
+  --color-focus-text: hsl(150, 30%, 10%);
+  --color-link-arrow: hsl(30, 25%, 55%);
+  --color-code-bg: hsl(80, 20%, 90%);
+  --color-invalid-link: hsl(30, 15%, 35%);
+  --color-invalid-link-bg: hsl(45, 30%, 92%);
+  --color-invalid-link-brackets: hsl(40, 15%, 72%);
+  --color-table-head-bg: hsl(90, 22%, 86%);
+  --color-table-row-odd: hsl(45, 38%, 97%);
+  --color-table-row-even: hsl(85, 25%, 93%);
+  --color-footer-text: hsl(120, 8%, 40%);
+  --color-internal-link-bg: hsl(95, 35%, 88%);
+  --color-internal-link-border: hsl(140, 30%, 40%);
+  --color-tooltip-bg: hsl(45, 40%, 98%);
+  --color-tooltip-border: hsl(90, 16%, 78%);
+  --color-tooltip-fade: 250, 248, 241;
+  --color-tooltip-shadow: rgba(31, 58, 43, 0.12);
+  --color-search-bg: hsl(85, 28%, 92%);
+  --color-search-result-bg: hsl(45, 40%, 98%);
+  --color-search-input-border: hsl(90, 16%, 76%);
+  --color-search-meta: hsl(120, 8%, 40%);
+  --color-graph-bg: hsl(45, 38%, 97%);
+  --color-graph-link: hsl(90, 18%, 76%);
+  --color-graph-node: hsl(140, 32%, 38%);
+  --color-graph-text: hsl(150, 25%, 18%);
+  --color-graph-text-stroke: hsla(45, 38%, 97%, 0.8);
 }
 
 [data-theme="dark"] {
-  --color-primary: hsl(0, 0%, 92%);
-  --color-text: hsl(0, 0%, 84%);
-  --color-subtext: hsl(0, 0%, 65%);
-  --color-border: hsl(0, 0%, 28%);
-  --color-background: hsl(220, 13%, 12%);
-  --color-box-background: hsl(220, 13%, 17%);
-  --color-link-hover-bg: hsl(40, 30%, 22%);
-  --color-focus-bg: hsl(40, 80%, 30%);
+  --color-primary: hsl(90, 25%, 90%);
+  --color-text: hsl(90, 12%, 80%);
+  --color-subtext: hsl(100, 8%, 62%);
+  --color-border: hsl(140, 12%, 24%);
+  --color-background: hsl(150, 18%, 8%);
+  --color-box-background: hsl(150, 15%, 12%);
+  --color-accent: hsl(110, 30%, 62%);
+  --color-accent-soft: hsl(140, 20%, 18%);
+  --color-link-hover-bg: hsl(140, 22%, 18%);
+  --color-focus-bg: hsl(45, 60%, 30%);
   --color-focus-text: hsl(0, 0%, 100%);
-  --color-link-arrow: hsl(0, 0%, 55%);
-  --color-code-bg: hsl(220, 13%, 20%);
-  --color-invalid-link: hsl(0, 0%, 70%);
-  --color-invalid-link-bg: hsl(220, 13%, 18%);
-  --color-invalid-link-brackets: hsl(0, 0%, 45%);
-  --color-table-head-bg: hsl(220, 13%, 22%);
-  --color-table-row-odd: hsl(220, 13%, 14%);
-  --color-table-row-even: hsl(220, 13%, 17%);
-  --color-footer-text: hsl(0, 0%, 60%);
-  --color-internal-link-bg: hsl(240, 30%, 22%);
-  --color-internal-link-border: #8b88e6;
-  --color-tooltip-bg: hsl(220, 13%, 17%);
-  --color-tooltip-border: hsl(0, 0%, 28%);
-  --color-tooltip-fade: 30, 33, 41;
+  --color-link-arrow: hsl(35, 25%, 55%);
+  --color-code-bg: hsl(150, 14%, 15%);
+  --color-invalid-link: hsl(40, 12%, 68%);
+  --color-invalid-link-bg: hsl(150, 14%, 13%);
+  --color-invalid-link-brackets: hsl(40, 8%, 42%);
+  --color-table-head-bg: hsl(150, 15%, 16%);
+  --color-table-row-odd: hsl(150, 18%, 9%);
+  --color-table-row-even: hsl(150, 15%, 12%);
+  --color-footer-text: hsl(100, 8%, 58%);
+  --color-internal-link-bg: hsl(140, 22%, 16%);
+  --color-internal-link-border: hsl(110, 30%, 55%);
+  --color-tooltip-bg: hsl(150, 15%, 12%);
+  --color-tooltip-border: hsl(140, 12%, 26%);
+  --color-tooltip-fade: 17, 26, 21;
   --color-tooltip-shadow: rgba(0, 0, 0, 0.5);
-  --color-search-bg: hsl(220, 13%, 17%);
-  --color-search-result-bg: hsl(220, 13%, 20%);
-  --color-search-input-border: hsl(0, 0%, 32%);
-  --color-search-meta: hsl(0, 0%, 65%);
-  --color-graph-bg: hsl(220, 13%, 15%);
-  --color-graph-link: hsl(0, 0%, 40%);
-  --color-graph-node: #a5a3ea;
-  --color-graph-text: hsl(0, 0%, 88%);
-  --color-graph-text-stroke: hsla(220, 13%, 12%, 0.8);
+  --color-search-bg: hsl(150, 15%, 12%);
+  --color-search-result-bg: hsl(150, 14%, 15%);
+  --color-search-input-border: hsl(140, 12%, 28%);
+  --color-search-meta: hsl(100, 8%, 62%);
+  --color-graph-bg: hsl(150, 18%, 10%);
+  --color-graph-link: hsl(140, 12%, 30%);
+  --color-graph-node: hsl(110, 32%, 58%);
+  --color-graph-text: hsl(90, 20%, 86%);
+  --color-graph-text-stroke: hsla(150, 18%, 8%, 0.8);
 }
 
 $border-radius: 4px;
-$font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-  sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+$font-family: "Source Serif 4", "Noto Serif Telugu", "Noto Serif Devanagari", Georgia, "Times New Roman", serif,
+  Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+$font-family-heading: "Fraunces", "Noto Serif Telugu", "Noto Serif Devanagari", Georgia, serif;
+$font-family-ui: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
 
 html {
   background: var(--color-background);
@@ -122,6 +129,7 @@ blockquote {
   margin: 0;
   font-size: 0.88em;
   background: var(--color-box-background);
+  border-left: 4px solid var(--color-accent);
   border-radius: $border-radius;
 
   p {
@@ -146,6 +154,9 @@ h6 {
   line-height: 1.3;
   margin-bottom: 0;
   padding-bottom: 0;
+  font-family: $font-family-heading;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   color: var(--color-primary);
 }
 
@@ -155,6 +166,9 @@ a {
   text-decoration: none;
   border-bottom: 1px solid var(--color-border);
   color: var(--color-primary);
+  &.internal-link {
+    border-bottom: 2px solid var(--color-accent-soft);
+  }
   &:hover {
     color: var(--color-primary) !important;
     background: var(--color-link-hover-bg);
@@ -179,6 +193,7 @@ a {
 }
 
 nav {
+  font-family: $font-family-heading;
   margin: 1em 0 3em;
   display: flex;
   align-items: center;
@@ -225,6 +240,7 @@ nav {
 
 .backlink-box {
   background: var(--color-box-background);
+  border-left: 3px solid var(--color-accent);
   padding: 1em;
   border-radius: $border-radius;
 }
@@ -272,6 +288,7 @@ th, td {
 }
 
 th {
+  font-family: $font-family-ui;
   font-weight: 600;
   color: var(--color-primary);
 }
