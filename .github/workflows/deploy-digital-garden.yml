@@ -47,7 +47,7 @@ jobs:
           # Remove symlinks (CI uses copied content, not symlinks)
           # Only remove symlinks; real directories (e.g. people/) are kept so
           # repo-only files like patanjali.md are preserved and cp -r merges into them
-          for item in _notes/computer-science _notes/sanskrit-literature _notes/history _notes/mathematics _notes/media _notes/people _notes/music _notes/pages _notes/finances _notes/wellness; do
+          for item in _notes/computer-science _notes/sanskrit-literature _notes/history _notes/mathematics _notes/media _notes/people _notes/music _notes/pages _notes/finances _notes/wellness _notes/research; do
             if [ -L "$item" ]; then
               rm -f "$item"
             fi
@@ -61,6 +61,7 @@ jobs:
             cp -r literature-notes/content/domains/mathematics _notes/
             cp -r literature-notes/content/media _notes/
             cp -r literature-notes/content/people _notes/
+            cp -r literature-notes/content/research _notes/
             cp -r literature-notes/music _notes/ 2>/dev/null || true
             cp -r literature-notes/pages _notes/ 2>/dev/null || true
             cp -r literature-notes/finances _notes/ 2>/dev/null || true
