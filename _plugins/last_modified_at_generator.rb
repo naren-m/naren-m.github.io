@@ -18,7 +18,8 @@ module Recents
       '_notes/music/' => 'music/',
       '_notes/pages/' => 'pages/',
       '_notes/finances/' => 'finances/',
-      '_notes/wellness/' => 'content/domains/wellness/'
+      '_notes/wellness/' => 'content/domains/wellness/',
+      '_notes/research/' => 'content/research/'
     }.freeze
 
     def generate(site)

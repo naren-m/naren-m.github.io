@@ -107,11 +107,12 @@ cp -r literature-notes/content/domains/humanities/history _notes/
 cp -r literature-notes/content/domains/mathematics _notes/
 cp -r literature-notes/content/media _notes/
 cp -r literature-notes/content/people _notes/
+cp -r literature-notes/content/research _notes/
 cp -r literature-notes/music _notes/
 cp -r literature-notes/pages _notes/
 ```
 
-**Important:** If literature-notes structure changes, update the GitHub Actions workflow copy commands.
+**Important:** If literature-notes structure changes, update the GitHub Actions workflow copy commands. The `literature-notes/` folder itself is excluded in `_config.yml`, so anything not copied into `_notes/` (for example journals and templates) is not published.
 
 ### Key Directories
 
@@ -166,6 +167,7 @@ These plugins are **critical** for the digital garden functionality:
 | mathematics | `content/domains/mathematics` |
 | media | `content/media` |
 | people | `content/people` |
+| research | `content/research` |
 | music | `music` |
 | pages | `pages` |
 

@@ -19,14 +19,14 @@ Security concepts, encryption algorithms, hashing, threat models, and cryptograp
 - [[Digital signatures]] and [[Public Key]] cryptography
 - [[Key exchange]] and [[Initialization Vector]]
 - [[Confidentiality]], [[Integrity]], [[Availability]]
-- [[Data encryption]] and [[Data Sensitivity]]
+- [[Encryption|Data encryption]] and [[Data Sensitivity]]
 - [[STRIDE]] threat modeling framework
 - [[Spoofing]], [[Tampering]], [[Repudiation]], [[Information Disclosure]], [[Denial of Service]], [[Elevation of Privilege]]
 - [[Side Channel Attack]], [[Buffer Overflows]], [[Rowhammer]], [[Cold Boot]], [[Cache prefetching]]
 - [[Strong Authentication]] and [[Token Authentication]]
 - [[Multifernet]], [[ENTROPY]], [[Fingerprint]], [[ECC memory]]
 - [[DLL Preloading Attack]], [[LOJAX]], [[Zero Day Attack]], [[Zero-Trust]]
-- [[Root of trust]] and [[idempotent]]
+- [[Root of trust]] and [[Idempotence]]
 
 ## 💻 Coding Practices
 

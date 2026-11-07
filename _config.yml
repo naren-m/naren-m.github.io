@@ -10,6 +10,9 @@ exclude:
   - '**/.obsidian'
   - '**/.venv'
   - '**/node_modules'
+  # The submodule is copied into _notes by CI; rendering it directly would
+  # publish a second raw copy of the whole vault (journals, templates, etc.)
+  - 'literature-notes'
 # You may need to change the base URL depending on your deploy configuration.
 baseurl:             ''
 
