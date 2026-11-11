@@ -13,6 +13,8 @@ exclude:
   # The submodule is copied into _notes by CI; rendering it directly would
   # publish a second raw copy of the whole vault (journals, templates, etc.)
   - 'literature-notes'
+  # Vault owner profile: written as instructions for AI agents, not for the public site
+  - '_notes/people/Naren.md'
 # You may need to change the base URL depending on your deploy configuration.
 baseurl:             ''
 
